@@ -15,10 +15,35 @@ while (i < db.length){
     i++
 }
     
+var risposta;
 if (registered == 1){
-    console.log('ciao \xa0' + mail + '!' + '\xa0 accesso effettuato')
+    risposta = 'ciao\xa0' + mail + '!' + '\xa0accesso effettuato con successo!';
+    console.log(risposta);
+    
 }
 else{
-    console.log('utente \xa0' + mail + '\xa0 non è registrato')
+    risposta = 'utente \xa0' + mail + '\xa0 non è registrato';
+    console.log(risposta);
+    
 }
 
+document.getElementById("risultato").innerHTML = risposta;
+
+
+var cognome = prompt('inserire cognome')
+cognome = cognome.charAt(0).toUpperCase() + cognome.slice(1).toLowerCase();
+console.log(cognome);
+var arrCognomi = ['Rossi' , 'Bianchi' , 'Verdi' , 'Blue'];
+arrCognomi.push(cognome);
+arrCognomi.sort();
+console.log(arrCognomi);
+
+
+
+var holder = document.getElementById("holder");
+for(var i=0; i < arrCognomi.length; i++){
+  holder.innerHTML += "<h2>"+arrCognomi[i]+"</h2><br>";
+}
+
+var index = arrCognomi.indexOf(cognome) + 1;
+document.getElementById("index").innerHTML = 'sei alla posizione ' + index ;
