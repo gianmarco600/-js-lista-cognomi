@@ -42,5 +42,14 @@ for(var i=0; i < arrCognomi.length; i++){
   holder.innerHTML += "<li>"+arrCognomi[i]+"</li><br>";
 }
 
-var index = arrCognomi.indexOf(cognome) + 1;
-document.getElementById("index").innerHTML = 'sei alla posizione ' + index ;
+
+var i = 0
+while (arrCognomi[i] != cognome && i <= arrCognomi.length ){
+    
+    ++i;
+}
+document.getElementById("index").innerHTML = 'sei alla posizione ' + ++i ;
+
+
+// var index = arrCognomi.indexOf(cognome) + 1;
+// document.getElementById("index").innerHTML = 'sei alla posizione ' + index ;
